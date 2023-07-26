@@ -69,3 +69,22 @@ export function useUser(): User {
 export function validateEmail(email: unknown): email is string {
   return typeof email === "string" && email.length > 3 && email.includes("@");
 }
+
+export function calculateNap(babyAgeWeeks: number, napTime: any) {
+  switch(true) {
+    case (babyAgeWeeks <= 8):
+      return ("20-45 minutes");
+      case (babyAgeWeeks >= 8 && babyAgeWeeks <= 12):
+        return ("60-90 minutes");
+      case (babyAgeWeeks >= 12 && babyAgeWeeks <= 16):
+        return ("90-120 minutes");
+      case (babyAgeWeeks >= 16 && babyAgeWeeks <= 20):
+        return ("120-150 minutes");
+      case (babyAgeWeeks >= 20 && babyAgeWeeks <= 26):
+          return ("150-180 minutes");
+      case (babyAgeWeeks >= 26 && babyAgeWeeks <= 30):
+        return ("150-270 minutes");
+    default:
+      return false;
+  }
+}
