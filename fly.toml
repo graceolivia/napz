@@ -1,4 +1,5 @@
 app = "napz-425e"
+primary_region = "ewr"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
